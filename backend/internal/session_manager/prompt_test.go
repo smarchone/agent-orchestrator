@@ -134,12 +134,14 @@ func TestBuildSystemPrompt_WorkerHandlesTaskSourcesAndProviderPRRules(t *testing
 		"attach it to this worker first",
 		"AO resolves this session from `AO_SESSION_ID`",
 		"do not invent issue, PR, or MR requirements",
-		"Do not use the agent runtime's built-in subagent or task-delegation tools",
 		"If no orchestrator is attached, continue serially and report the need for additional AO workers to the human",
 	} {
 		if !strings.Contains(got, want) {
 			t.Fatalf("worker prompt missing %q:\n%s", want, got)
 		}
+	}
+	if strings.Contains(got, "built-in subagent") {
+		t.Fatalf("worker prompt still forbids runtime subagents:\n%s", got)
 	}
 	if strings.Contains(got, "- ## Git and PR/MR Rules") || strings.Contains(got, "- ## Local Git Rules") {
 		t.Fatalf("worker prompt has malformed repository heading bullet prefix:\n%s", got)

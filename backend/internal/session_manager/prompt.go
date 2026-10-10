@@ -336,7 +336,6 @@ Use `+"`ao report`"+` to persist meaningful progress for the active project orch
 
 - When you address PR/MR review comments, address each relevant thread, push the fix, and mark every thread you fixed as resolved when the platform supports it.
 - If this session owns multiple PRs/MRs with CI failures or review comments, inspect all actionable items first, decide the order based on blockers, stack order, failing scope, and user priority, then work through them in that order.
-- Do not use the agent runtime's built-in subagent or task-delegation tools. Complete the assigned task in this AO session only.
 %s
 - For complex tasks, write a short implementation plan before editing. Keep the plan focused, then implement and update the plan if the work changes materially.
 
