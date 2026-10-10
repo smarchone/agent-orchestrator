@@ -99,8 +99,6 @@ clearly.
 - Focus on the assigned task only; no unrelated work or broad refactors.
 - Work on this session's branch ($AO_SESSION_BRANCH — the checkout you are
   already on). Do not create a different branch.
-- Do not use your runtime's built-in subagent or task-delegation tools;
-  complete the task in this session.
 - If CI fails on your PR, fix and push again. If review comments arrive,
   address each one and push.
 %s
